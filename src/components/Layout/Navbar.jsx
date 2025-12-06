@@ -26,17 +26,23 @@ function Navbar() {
       <div className="bg-transparent px-4 py-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <a
+            href={`${import.meta.env.BASE_URL}`}
+            className="flex items-center gap-2 md:gap-4"
+          >
             <img
               src={`${import.meta.env.BASE_URL}logo/logo-white.svg`}
               alt="logo-white"
               className="h-auto max-w-[150px] md:max-w-[200px] w-auto mx-auto md:mx-0"
             />
-          </div>
+          </a>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-6 text-white font-montserrat font-medium text-xl uppercase">
-            <a href="/" className="hover:text-yellow-400 transition-colors">
+            <a
+              href={`${import.meta.env.BASE_URL}`}
+              className="hover:text-yellow-400 transition-colors"
+            >
               {t("nav.home")}
             </a>
             <a
@@ -52,7 +58,7 @@ function Navbar() {
               {t("nav.work")}
             </a>
             <a
-              href="#contact"
+              href={`${import.meta.env.BASE_URL}contact`}
               className="hover:text-yellow-400 transition-colors"
             >
               {t("nav.contact")}
