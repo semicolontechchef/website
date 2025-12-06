@@ -22,11 +22,13 @@ A modern Single Page Application built with React, Vite, Tailwind CSS, and i18n 
 ### Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 2. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -44,8 +46,9 @@ npm run dev
 ## Deployment to GitHub Pages
 
 1. Make sure your repository is set up on GitHub
-2. Update the `base` path in `vite.config.js` to match your repository name (currently set to `/code-base/`)
+2. Update the `base` path in `vite.config.js` to match your repository name (currently set to `/website/`)
 3. Run the deployment command:
+
 ```bash
 npm run deploy
 ```
@@ -57,7 +60,7 @@ This will build your app and deploy it to the `gh-pages` branch of your reposito
 ## Project Structure
 
 ```
-code-base/
+website/
 ├── public/          # Static assets
 ├── src/
 │   ├── assets/      # Images, fonts, etc.
@@ -76,6 +79,7 @@ code-base/
 ## Internationalization
 
 The app supports two languages:
+
 - English (default)
 - Arabic (with RTL support)
 
@@ -84,4 +88,3 @@ Language can be switched using the language switcher in the header.
 ## License
 
 MIT
-

@@ -1,36 +1,35 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
-import Home from './pages/Home'
-import LanguageSwitcher from './components/LanguageSwitcher'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+import Navbar from "./components/Layout/Navbar";
+import Footer from "./components/Layout/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 function App() {
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Set document direction based on language
-    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr'
-    document.documentElement.lang = i18n.language
-  }, [i18n.language])
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
 
   return (
-    <BrowserRouter basename="/code-base">
-      <div className="min-h-screen bg-gray-50">
-        <header className="bg-white shadow-sm">
-          <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold">SPA Website</h1>
-            <LanguageSwitcher />
-          </div>
-        </header>
-        <main>
+    <BrowserRouter basename={basename}>
+      <div className="min-h-screen flex flex-col relative overflow-hidden">
+        <Navbar />
+        <main className="flex-1 relative pb-[1000px] md:pb-[350px]">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
-
+export default App;

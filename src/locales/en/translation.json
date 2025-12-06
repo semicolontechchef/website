@@ -1,6 +1,64 @@
 {
-  "welcome": "Welcome",
-  "home": "Home",
-  "language": "Language"
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT US",
+    "work": "WORK",
+    "contact": "CONTACT",
+    "language": "عربيه"
+  },
+  "home": {
+    "hero": {
+      "semicolon": "SEMICOLON",
+      "we": "WE",
+      "turn": "TURN",
+      "heads": "HEADS"
+    },
+    "who": {
+      "title": "WHO",
+      "description": "was established in 2019 by a specialized team in the field of innovative and effective advertising and media mediation services. Semicolon aims to contribute towards achieving your goals in the field of marketing, advertising, media and public relations, as well as implementing various campaigns and strategic planning as well as providing Logistics and research"
+    },
+    "experts": {
+      "title-1": "What are",
+      "title-2": "we experts in?",
+      "creativeDesigns": "Creative Designs",
+      "billboard": "Billboard",
+      "socialMedia": "Social Media",
+      "mediaProduction": "Media Production",
+      "printings": "Printings",
+      "tvAds": "Tv Ads",
+      "publicTransportation": "Public Transportation",
+      "strategyPlans": "Strategy Plans"
+    },
+    "stats": {
+      "years": "YEARS OF EXPERIENCE",
+      "professionals": "SKILLED PROFESSIONALS",
+      "projects": "COMPLETED PROJECTS"
+    },
+    "partners": {
+      "title-1": "OUR",
+      "title-2": "PARTNERS"
+    }
+  },
+  "about": {
+    "hero": {
+      "our": "OUR",
+      "creative": "CREATIVE",
+      "team": "TEAM"
+    },
+    "message": {
+      "title": "CEO MESSAGE",
+      "description": "Semicolon was established in 2019 by a specialized team in the field of innovative and effective advertising and media mediation services. Semicolon aims to contribute towards achieving your goals in the field of marketing, advertising, media and public relations, as well as implementing various campaigns and strategic planning as well as."
+    }
+  },
+  "footer": {
+    "contact-us": "CONTACT US",
+    "ramallah": "RAMALLAH",
+    "email": "INFO@SEMICOLON.MEDIA",
+    "phone": "+970 599 505 059",
+    "home": "Home",
+    "about": "About us",
+    "work": "Work",
+    "contact": "Contact",
+    "copyright": "COPYRIGHT 2025 BY"
+  }
 }
-
