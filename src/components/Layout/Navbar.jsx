@@ -41,25 +41,25 @@ function Navbar() {
           <nav className="hidden lg:flex items-center gap-6 text-white font-montserrat font-medium text-xl uppercase">
             <a
               href={`${import.meta.env.BASE_URL}`}
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-[#FFF100] transition-colors"
             >
               {t("nav.home")}
             </a>
             <a
               href={`${import.meta.env.BASE_URL}about`}
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-[#FFF100] transition-colors"
             >
               {t("nav.about")}
             </a>
             <a
               href={`${import.meta.env.BASE_URL}work`}
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-[#FFF100] transition-colors"
             >
               {t("nav.work")}
             </a>
             <a
               href={`${import.meta.env.BASE_URL}contact`}
-              className="hover:text-yellow-400 transition-colors"
+              className="hover:text-[#FFF100] transition-colors"
             >
               {t("nav.contact")}
             </a>
@@ -128,7 +128,7 @@ function Navbar() {
           {/* Drawer Header */}
           <div className="flex justify-between items-center mb-8">
             <div className="flex items-center gap-2">
-              <span className="text-yellow-400 font-achemost text-4xl">;</span>
+              <span className="text-[#FFF100] font-achemost text-4xl">;</span>
               <div className="flex flex-col">
                 <span className="text-white font-montserrat font-bold text-lg uppercase">
                   SEMICOLON
@@ -164,28 +164,28 @@ function Navbar() {
             <a
               href="#home"
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-yellow-400 transition-colors py-2"
+              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
             >
               {t("nav.home")}
             </a>
             <a
               href="#about"
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-yellow-400 transition-colors py-2"
+              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
             >
               {t("nav.about")}
             </a>
             <a
               href="#work"
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-yellow-400 transition-colors py-2"
+              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
             >
               {t("nav.work")}
             </a>
             <a
               href="#contact"
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-yellow-400 transition-colors py-2"
+              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
             >
               {t("nav.contact")}
             </a>

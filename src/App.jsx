@@ -18,9 +18,9 @@ function App() {
 
   return (
     <BrowserRouter basename={basename}>
-      <div className="min-h-screen flex flex-col relative overflow-hidden">
+      <div className="min-h-screen flex flex-col relative overflow-hidden bg-white">
         <Navbar />
-        <main className="flex-1 relative pb-[1000px] md:pb-[350px]">
+        <main className="flex-1 relative pb-[350px]">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

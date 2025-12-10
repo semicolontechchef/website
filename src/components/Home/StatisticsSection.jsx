@@ -18,7 +18,7 @@ function StatisticsSection() {
                 <span className="font-montserrat font-black text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">
                   05
                 </span>
-                <span className="text-yellow-400 font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
+                <span className="text-[#FFF100] font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
                   +
                 </span>
               </div>
@@ -31,7 +31,7 @@ function StatisticsSection() {
                 <span className="font-montserrat font-black text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">
                   40
                 </span>
-                <span className="text-yellow-400 font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
+                <span className="text-[#FFF100] font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
                   +
                 </span>
               </div>
@@ -44,7 +44,7 @@ function StatisticsSection() {
                 <span className="font-montserrat font-black text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">
                   800
                 </span>
-                <span className="text-yellow-400 font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
+                <span className="text-[#FFF100] font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
                   +
                 </span>
               </div>

@@ -23,7 +23,7 @@ function HeroSection() {
           <span className="font-achemost text-white">
             {t("about.hero.our")}
           </span>
-          <span className="font-achemost text-yellow-400 text-3xl sm:text-4xl md:text-6xl lg:text-6xl">
+          <span className="font-achemost text-[#FFF100] text-3xl sm:text-4xl md:text-6xl lg:text-6xl">
             {t("about.hero.creative")}
           </span>
           <span className="font-achemost text-white uppercase tracking-widest text-3xl sm:text-4xl md:text-6xl lg:text-8xl">

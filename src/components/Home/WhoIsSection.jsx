@@ -25,8 +25,8 @@ function WhoIsSection() {
 
         {/* Description */}
         <div className="container mx-auto max-w-6xl border-b-2 border-black pb-8 md:pb-12 px-4">
-          <p className="font-montserrat text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl leading-relaxed font-medium">
-            <span className="font-montserrat font-black text-black text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+          <p className="font-montserrat text-black text-sm sm:text-base md:text-xl font-medium text-center">
+            <span className="font-montserrat font-black text-black text-lg sm:text-xl md:text-2xl">
               {t("home.hero.semicolon")}{" "}
             </span>
             {t("home.who.description")}
@@ -60,7 +60,7 @@ function WhoIsSection() {
                   </p>
                 </div>
                 {index < services.length - 1 && index % 4 !== 3 && (
-                  <div className="hidden md:block absolute top-1/2 -right-4 w-px h-16 bg-black opacity-20 transform -translate-y-1/2"></div>
+                  <div className="hidden md:block absolute bottom-0 -right-4 w-1 h-16 bg-black transform -translate-y-1/2"></div>
                 )}
               </div>
             ))}

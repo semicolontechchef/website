@@ -9,7 +9,7 @@ function Home() {
       <div className="flex-1">
         <HeroSection />
       </div>
-      <div className="flex-1 -mt-[120px] md:-mt-[120px] z-10">
+      <div className="flex-1 -mt-[120px] md:-mt-[80px]">
         <WhoIsSection />
       </div>
       <div className="flex-1 -mt-[60px] md:-mt-[120px] relative">

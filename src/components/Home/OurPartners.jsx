@@ -13,7 +13,7 @@ function OurPartnersSection() {
 
   return (
     <section className="relative px-4 w-full z-30">
-      <div className="container mx-auto py-12 sm:py-20 md:py-28 lg:py-36 max-w-6xl relative z-10">
+      <div className="container mx-auto py-12 sm:py-20 md:py-28 max-w-6xl relative z-10">
         <div className="container mx-auto max-w-6xl">
           <h2 className="font-achemost font-black text-black text-xl sm:text-2xl md:text-3xl lg:text-6xl text-center mb-8 md:mb-20">
             {t("home.partners.title-1")}

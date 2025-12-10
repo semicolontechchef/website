@@ -14,8 +14,8 @@ function LanguageSwitcher() {
           onClick={() => changeLanguage("en")}
           className={`transition-colors ${
             i18n.language === "en"
-              ? "text-yellow-400 font-bold"
-              : "text-white hover:text-yellow-400"
+              ? "text-[#FFF100] font-bold"
+              : "text-white hover:text-[#FFF100]"
           }`}
         >
           {t("nav.language")}
@@ -27,8 +27,8 @@ function LanguageSwitcher() {
           onClick={() => changeLanguage("ar")}
           className={`transition-colors ${
             i18n.language === "ar"
-              ? "text-yellow-400 font-bold"
-              : "text-white hover:text-yellow-400"
+              ? "text-[#FFF100] font-bold"
+              : "text-white hover:text-[#FFF100]"
           }`}
         >
           {t("nav.language")}
