@@ -57,10 +57,17 @@
               return s.replace(/~and~/g, "&");
             })
             .join("?");
+          
+          // Ensure pathname ends with / for base path
+          var pathname = l.pathname;
+          if (!pathname.endsWith("/") && pathname.split("/").length <= 3) {
+            pathname += "/";
+          }
+          
           window.history.replaceState(
             null,
             null,
-            l.pathname.slice(0, -1) + decoded + l.hash
+            (pathname.endsWith("/") ? pathname.slice(0, -1) : pathname) + decoded + l.hash
           );
         }
       })(window.location);
