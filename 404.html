@@ -64,7 +64,123 @@
     <link rel="canonical" href="" />
 
     <title>Semicolon Agency</title>
-    <script type="module" crossorigin src="/website/assets/index-DrVhA0N7.js"></script>
+
+    <!-- Localize meta tags based on URL language (runs before React) -->
+    <script>
+      (function () {
+        // Detect language from URL path
+        var pathname = window.location.pathname;
+        var lang = "en"; // default
+        var basePath = "/website/";
+
+        // Extract language from path: /website/ar/... or /website/en/...
+        // Also handle query string redirects: /website/?/ar/...
+        var pathMatch = pathname.match(/\/(ar|en)(\/|$|\?)/);
+        if (pathMatch) {
+          lang = pathMatch[1];
+        } else {
+          // Check query string for redirects from 404.html
+          var search = window.location.search;
+          if (search && search.includes("?/")) {
+            var queryPath = search.substring(2); // Remove "?/"
+            var queryMatch = queryPath.match(/^(ar|en)(\/|$)/);
+            if (queryMatch) {
+              lang = queryMatch[1];
+            }
+          }
+        }
+
+        // Translations for meta tags
+        var translations = {
+          en: {
+            title: "Semicolon Agency - Creative Advertising & Media Production",
+            description:
+              "Semicolon Agency is a leading advertising agency providing innovative marketing, media production, and strategic planning services.",
+            keywords:
+              "advertising agency, marketing, media production, creative design, semicolon",
+            locale: "en_US",
+          },
+          ar: {
+            title: "شركة سيمي كولون للدعايه و التسويق",
+            description:
+              "جروب إعلاني وإنتاجي هو أحدث جروب إعلاني وإنتاجي في المنطقة، ويقدم خدمات إعلانية وإنتاجية مبتكرة وفعالة للعملاء.",
+            keywords:
+              "جروب إعلاني وإنتاجي, خدمات إعلانية وإنتاجية, مبتكرة وفعالة, للعملاء",
+            locale: "ar_SA",
+          },
+        };
+
+        var t = translations[lang] || translations.en;
+        var siteUrl = "https://semicolontechchef.github.io";
+
+        // Build current URL - preserve full path if available
+        var currentUrl = siteUrl + pathname;
+        // If pathname doesn't include language, add it
+        if (!pathname.match(/\/(ar|en)(\/|$)/)) {
+          currentUrl = siteUrl + basePath + lang;
+        }
+
+        // Update html lang and dir attributes
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+        // Helper function to update or create meta tag
+        function updateMetaTag(name, content, attribute) {
+          attribute = attribute || "name";
+          var element = document.querySelector(
+            "meta[" + attribute + '="' + name + '"]'
+          );
+          if (!element) {
+            element = document.createElement("meta");
+            element.setAttribute(attribute, name);
+            document.head.appendChild(element);
+          }
+          element.setAttribute("content", content);
+        }
+
+        // Update basic meta tags
+        updateMetaTag("description", t.description);
+        updateMetaTag("keywords", t.keywords);
+        updateMetaTag("language", lang);
+
+        // Update Open Graph meta tags
+        updateMetaTag("og:title", t.title, "property");
+        updateMetaTag("og:description", t.description, "property");
+        updateMetaTag("og:url", currentUrl, "property");
+        updateMetaTag("og:locale", t.locale, "property");
+
+        // Update Twitter Card meta tags
+        updateMetaTag("twitter:title", t.title);
+        updateMetaTag("twitter:description", t.description);
+
+        // Update title
+        document.title = t.title;
+
+        // Update hreflang links
+        var enUrl = siteUrl + basePath + "en";
+        var arUrl = siteUrl + basePath + "ar";
+
+        var hreflangEn = document.querySelector(
+          'link[rel="alternate"][hreflang="en"]'
+        );
+        if (hreflangEn) hreflangEn.setAttribute("href", enUrl);
+
+        var hreflangAr = document.querySelector(
+          'link[rel="alternate"][hreflang="ar"]'
+        );
+        if (hreflangAr) hreflangAr.setAttribute("href", arUrl);
+
+        var hreflangDefault = document.querySelector(
+          'link[rel="alternate"][hreflang="x-default"]'
+        );
+        if (hreflangDefault) hreflangDefault.setAttribute("href", enUrl);
+
+        // Update canonical URL
+        var canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) canonical.setAttribute("href", currentUrl);
+      })();
+    </script>
+    <script type="module" crossorigin src="/website/assets/index-D6AVuEij.js"></script>
     <link rel="stylesheet" crossorigin href="/website/assets/index-Ds4TjANG.css">
   </head>
   <body>
