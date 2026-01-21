@@ -20,15 +20,40 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Semicolon Agency" />
     <meta
+      property="og:title"
+      content="Semicolon Agency - Creative Advertising & Media Production"
+    />
+    <meta
+      property="og:description"
+      content="Semicolon Agency is a leading advertising agency providing innovative marketing, media production, and strategic planning services."
+    />
+    <meta
+      property="og:url"
+      content="https://semicolontechchef.github.io/website/"
+    />
+    <meta
       property="og:image"
       content="https://semicolontechchef.github.io/website/img/card.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/png" />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Semicolon Agency - Creative Advertising & Media Production"
+    />
+    <meta
+      name="twitter:description"
+      content="Semicolon Agency is a leading advertising agency providing innovative marketing, media production, and strategic planning services."
+    />
+    <meta
+      name="twitter:image"
+      content="https://semicolontechchef.github.io/website/img/card.png"
+    />
 
     <!-- Language Alternates (will be dynamically updated) -->
     <link rel="alternate" hreflang="en" href="" />
@@ -57,17 +82,19 @@
               return s.replace(/~and~/g, "&");
             })
             .join("?");
-          
+
           // Ensure pathname ends with / for base path
           var pathname = l.pathname;
           if (!pathname.endsWith("/") && pathname.split("/").length <= 3) {
             pathname += "/";
           }
-          
+
           window.history.replaceState(
             null,
             null,
-            (pathname.endsWith("/") ? pathname.slice(0, -1) : pathname) + decoded + l.hash
+            (pathname.endsWith("/") ? pathname.slice(0, -1) : pathname) +
+              decoded +
+              l.hash
           );
         }
       })(window.location);
