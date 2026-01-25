@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         achemost: ["Achemost", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        bukra: ["Bukra", "sans-serif"],
+        arsian: ["Arsian", "sans-serif"],
+        arabic: ["Bukra", "Arsian", "sans-serif"],
       },
     },
   },

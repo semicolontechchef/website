@@ -1,33 +1,34 @@
 {
+  "seo": {
+    "title": "Semicolon Agency - Creative Advertising & Media Production",
+    "description": "Semicolon Agency is a leading advertising agency providing innovative marketing, media production, and strategic planning services.",
+    "keywords": "advertising agency, marketing, media production, creative design, semicolon"
+  },
   "nav": {
     "home": "HOME",
     "about": "ABOUT US",
     "work": "WORK",
     "contact": "CONTACT",
-    "language": "ع"
+    "switch-lang": "عربية",
+    "lang": "en"
   },
   "home": {
-    "hero": {
-      "semicolon": "SEMICOLON",
-      "we": "WE",
-      "turn": "TURN",
-      "heads": "HEADS"
-    },
     "who": {
-      "title": "WHO",
-      "description": "was established in 2019 by a specialized team in the field of innovative and effective advertising and media mediation services. Semicolon aims to contribute towards achieving your goals in the field of marketing, advertising, media and public relations, as well as implementing various campaigns and strategic planning as well as providing Logistics and research services to manage your events. Semicolon intends to support you in building your business identity and increase your visibility and leadership in the market. Whether you are looking for an integrated marketing campaign, advertising consultations, or plans strategy or media and advertising products, our professional team will be at your side."
+      "p1": {
+        "bold": "",
+        "text": "We don't believe in full stop. What we believe in is a long journey with our clients, where trust is the force that placed us at the forefront of the market. That trust strengthened our belief that marketing and media, when implemented right, can create real impact for people and for business owners alike."
+      },
+      "p2": {
+        "bold": "",
+        "text": "“Semicolon is our Passion” an amazing team operating from Palestine and Egypt to deliver services structured to accommodate the fast pace the world is moving into. We tend to touch the core of your brand identity by using up-to-date modern tools and strategies, to transform experience into solutions tailored for anyone seeking a fresh start."
+      },
+      "p3": {
+        "bold": "",
+        "text": "Between the dot and the pause, you won't find half-steps. You'll find a complete vision—one that starts with an idea and ends with your brand present across multiple advertising channels. Because one channel with a strong idea is not enough, and multiple channels without a strong idea won't achieve your goals. At Semicolon, we blend both to bring your project's ambition to life."
+      }
     },
     "experts": {
-      "title-1": "What are",
-      "title-2": "we experts in?",
-      "creativeDesigns": "Creative Designs",
-      "billboard": "Billboard",
-      "socialMedia": "Social Media",
-      "mediaProduction": "Media Production",
-      "printings": "Printings",
-      "tvAds": "Tv Ads",
-      "publicTransportation": "Public Transportation",
-      "strategyPlans": "Strategy Plans"
+      "title": "What are we experts in?"
     },
     "stats": {
       "years": "YEARS OF EXPERIENCE",
@@ -35,20 +36,135 @@
       "projects": "COMPLETED PROJECTS"
     },
     "partners": {
-      "title-1": "OUR",
-      "title-2": "PARTNERS"
+      "title-1": "GOLDEN",
+      "title-2": "RECORDS"
     }
   },
   "about": {
-    "hero": {
-      "our": "OUR",
-      "creative": "CREATIVE",
-      "team": "TEAM"
+    "who": {
+      "who-are-we": {
+        "title": "Our Story",
+        "text": "Semicolon is a marketing and advertising agency driven by passion. Our story began in 2019 with a vision deeper than simply offering services. We aim to be a true partner, that lives the spirit of your brand and carries it from an idea to a powerful presence, reaching the right audience through more than one channel."
+      },
+      "our-vision": {
+        "title": "Our Vision",
+        "text": "An extended bridge and stories of innovation that never stop. Our vision is embodied in the semicolon itself—not just as a symbol, but as our method of work. It is the bridge that connects your business reality today with your future ambitions."
+      },
+      "our-mission": {
+        "title": "Our Mission",
+        "text": "A strategic partnership built on global standards. Our mission is to go beyond being a traditional advertising intermediary. We strive to become your first strategic marketing partner, powered by years of experience and a unique blend of tools from both past and future…securing your place at the front of the market."
+      }
     },
-    "message": {
+    "message-1": {
       "title": "CEO MESSAGE",
-      "description": "Semicolon was established in 2019 by a specialized team in the field of innovative and effective advertising and media mediation services. Semicolon aims to contribute towards achieving your goals in the field of marketing, advertising, media and public relations, as well as implementing various campaigns and strategic planning as well as."
+      "description": "Semicolon, is more than just a symbol; it's a bridge connecting ideas, media, and advertising in an innovative and effective way. Our mission stems from the expertise of our strong and experienced team, who understand exactly how to achieve the desired goals for every client, regardless of their volume or market position. We aspire to global leadership by providing integrated advertising and media solutions that keep pace with the latest advancements, especially in the field of artificial intelligence. Our vision is to be the partner that puts our clients ahead through innovative solutions that precisely meet their needs and help them achieve their goals effectively and impactful."
+    },
+    "message-2": {
+      "title": "Co-founder | Artistic Director",
+      "description": "Leadership isn't built on repetition, but on a deep understanding of the times and the market, and on the ability to see what isn't said before it's asked. This is where most ideas originate, and this is where Semicolon has come to existence. Semicolon wasn't created to be just another carbon copy of other similar agencies in the region, but rather a different kind of thinking space, giving brands a genuine voice and a unique presence. I believe that the best ideas are those that are intelligently conceived, flawlessly executed, and measured by their impact Tamara “The idea comes first…then everything else.”"
+    },
+    "team": {
+      "title": "Our Creative Team"
     }
+  },
+  "contact": {
+    "info": {
+      "desc": "Relying on one channel can limit your brand’s potential and cost you valuable opportunities. Repetitive ideas won’t build distinctive advertising, and strategies without scientific, practical foundations won’t take your dreams far enough. "
+    },
+    "why-us": {
+      "title": "WHY CHOOSE",
+      "desc": "At Semicolon, with a professional team from Egypt and Palestine, we believe success needs multiple perspectives. That’s why we provide an integrated advertising ecosystem, backed by carefully developed creative ideas and a clear marketing methodology—giving your vision the path it truly deserves. A new step toward a bigger vision and a further-reaching success.",
+      "desc-yellow": "We’re ready to start the journey with you."
+    }
+  },
+  "work": {
+    "art-work": {
+      "title": "Success; To Be Continued"
+    },
+    "desc": {
+      "title": "",
+      "desc": "At Semicolon, we don’t believe stories end. Every brand has its own path, and we don’t rely on a single advertising channel. Instead, we create an integrated system of tools and platforms, allowing each project to find the path that matches its ambition. Explore our success stories and see how we turned challenges into growth journeys that continue to evolve.",
+      "desc-yellow": ""
+    },
+    "media-production": {
+      "title-1": "We Tell Your Story - In",
+      "title-2": "Sight and Sound",
+      "desc": {
+        "title": "3D + CGI + AI",
+        "desc": "We combine an eye for detail that notices what competitors miss with deep media expertise. By using advanced CGI, 3D, and AI technologies, we create innovative worlds that add excitement and appeal to your brand. These visuals aren’t just beautiful scenes, they become drivers of sales and revenue growth. When crafted professionally,",
+        "desc-yellow": "imagery becomes part of the purchasing decision."
+      },
+      "video-production": {
+        "video": "VIDEO",
+        "production": "Production",
+        "header": {
+          "title": "Every idea proclaims a sole",
+          "desc": "in which we produce of it an amazing profile."
+        },
+        "desc": {
+          "desc": "Our journey began with passion, positioning us among leading advertising agencies that embraced global technologies early on. Behind every project is a dedicated team from Egypt and Palestine—hearts working before cameras, and minds that believe every project has a soul deserving to be presented in its best form. Every idea has a spirit,",
+          "desc-yellow": "and we give it its most powerful visual life."
+        }
+      },
+      "ai-production": {
+        "ai": "AI",
+        "production": "Production",
+        "header": {
+          "title": "Semicolon opens doors",
+          "desc": "to endless imagination"
+        },
+        "desc": {
+          "desc": "We see artificial intelligence not as a replacement for creativity, but as a semicolon between two forces—human imagination and technological power. Together, they connect seamlessly to produce results beyond expectations.",
+          "desc-yellow": "A semicolon that opens endless doors for imagination and growth."
+        }
+      },
+      "radio-production": {
+        "radio": "RADIO",
+        "production": "Production",
+        "header": {
+          "title": "Sound Carries",
+          "desc": "A Hidden Magic"
+        },
+        "desc": {
+          "desc": "When your brand passes through the ears, it reaches the deepest layers of memory. At Semicolon, we believe the right tone of voice can be as powerful as a thousand images. That’s why we give exceptional attention to audio production from impactful ",
+          "desc-yellow": "scriptwriting to the finest details of sound engineering."
+        }
+      }
+    },
+    "strategy-plans": {
+      "header": {
+        "title": "We connect you through",
+        "desc": "a compass towards your future vision"
+      },
+      "section": {
+        "desc": "",
+        "desc-bold": "Success is never accidental it’s born from precise planning under expert leadership. The right marketing strategy is the semicolon that bridges where your business stands today and where you aspire to be tomorrow. "
+      },
+      "desc": {
+        "desc": "Our clients’ testimonials speak for the real impact of our strategies—not as written plans, but as actionable steps that delivered measurable growth. We study your market deeply, understand your challenges, and craft solutions tailored from every angle.",
+        "desc-yellow": "We don’t build plans—we turn ambition into clear steps that lead you forward."
+      }
+    },
+    "tv-ads": {
+      "header": {
+        "title": "The big showcase",
+        "desc": "is our game"
+      },
+      "desc": {
+        "desc": "The big screen still commands unmatched presence. At Semicolon, we believe successful TV advertising starts with the idea—it is the foundation of every medium. We carefully blend strong storytelling with visually stunning execution powered by modern technology, delivering ads that are not just watched, but remembered.",
+        "desc-yellow": "The big screen is our playground."
+      }
+    }
+  },
+  "services": {
+    "creative-designs": "Creative Designs",
+    "billboard": "Billboards",
+    "social-media": "Social Media",
+    "media-production": "Media Production",
+    "printings": "Printings",
+    "tv-ads": "Sport Channels Ads",
+    "public-transportation": "Public Transportation",
+    "strategy-plans": "Strategy Plans"
   },
   "footer": {
     "contact-us": "CONTACT US",

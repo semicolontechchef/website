@@ -1,10 +1,27 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useLocalizedNavigation } from "../../hooks/useLocalizedNavigation";
+import { getAssetPath } from "../../utils/paths";
+import { getPathWithoutLang } from "../../utils/paths";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
+  const { getPath } = useLocalizedNavigation();
+  const location = useLocation();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // Get current path without language prefix
+  const currentPath = getPathWithoutLang(location.pathname);
+
+  // Check if a route is active
+  const isActive = (path) => {
+    if (path === "/") {
+      return currentPath === "/" || currentPath === "";
+    }
+    return currentPath.startsWith(path);
+  };
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -21,48 +38,59 @@ function Navbar() {
   const isRTL = i18n.language === "ar";
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
+    <header
+      className={`absolute top-0 left-0 right-0 z-50 ${
+        i18n.language === "ar"
+          ? "font-arsian text-4xl"
+          : "font-montserrat text-xl"
+      }`}
+    >
       {/* Top Navigation Bar - Dark Blue */}
       <div className="bg-transparent px-4 py-8">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
-          <a
-            href={`${import.meta.env.BASE_URL}`}
-            className="flex items-center gap-2 md:gap-4"
-          >
+          <Link to={getPath("/")} className="flex items-center gap-2 md:gap-4">
             <img
-              src={`${import.meta.env.BASE_URL}logo/logo-white.svg`}
+              src={getAssetPath("logo/logo-white.svg")}
               alt="logo-white"
               className="h-auto max-w-[150px] md:max-w-[200px] w-auto mx-auto md:mx-0"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-white font-montserrat font-medium text-xl uppercase">
-            <a
-              href={`${import.meta.env.BASE_URL}`}
-              className="hover:text-[#FFF100] transition-colors"
+          <nav className="hidden lg:flex items-center gap-6 text-white font-medium uppercase">
+            <Link
+              to={getPath("/")}
+              className={`transition-colors ${
+                isActive("/") ? "text-[#FFF100]" : "hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.home")}
-            </a>
-            <a
-              href={`${import.meta.env.BASE_URL}about`}
-              className="hover:text-[#FFF100] transition-colors"
+            </Link>
+            <Link
+              to={getPath("/about")}
+              className={`transition-colors ${
+                isActive("/about") ? "text-[#FFF100]" : "hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.about")}
-            </a>
-            <a
-              href={`${import.meta.env.BASE_URL}work`}
-              className="hover:text-[#FFF100] transition-colors"
+            </Link>
+            <Link
+              to={getPath("/work")}
+              className={`transition-colors ${
+                isActive("/work") ? "text-[#FFF100]" : "hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.work")}
-            </a>
-            <a
-              href={`${import.meta.env.BASE_URL}contact`}
-              className="hover:text-[#FFF100] transition-colors"
+            </Link>
+            <Link
+              to={getPath("/contact")}
+              className={`transition-colors ${
+                isActive("/contact") ? "text-[#FFF100]" : "hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.contact")}
-            </a>
+            </Link>
           </nav>
 
           {/* Right Side - Language Switcher and Hamburger */}
@@ -114,7 +142,7 @@ function Navbar() {
 
       {/* Off-Canvas Drawer */}
       <div
-        className={`fixed top-0 h-full w-80 bg-[#1a2b4a] z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
+        className={`fixed top-0 h-full w-80 bg-black z-50 transform transition-transform duration-300 ease-in-out lg:hidden ${
           isRTL ? "left-0" : "right-0"
         } ${
           isDrawerOpen
@@ -127,17 +155,13 @@ function Navbar() {
         <div className="flex flex-col h-full p-6">
           {/* Drawer Header */}
           <div className="flex justify-between items-center mb-8">
-            <div className="flex items-center gap-2">
-              <span className="text-[#FFF100] font-achemost text-4xl">;</span>
-              <div className="flex flex-col">
-                <span className="text-white font-montserrat font-bold text-lg uppercase">
-                  SEMICOLON
-                </span>
-                <span className="text-white font-montserrat text-xs uppercase">
-                  ADVERTISING AGENCY
-                </span>
-              </div>
-            </div>
+            <Link to={getPath("/")} className="flex items-center gap-2">
+              <img
+                src={getAssetPath("logo/logo-white.svg")}
+                alt="logo-white"
+                className="h-auto w-full mx-auto md:mx-0"
+              />
+            </Link>
             <button
               onClick={closeDrawer}
               className="text-white p-2 focus:outline-none"
@@ -161,34 +185,50 @@ function Navbar() {
 
           {/* Navigation Links */}
           <nav className="flex flex-col gap-4 flex-1">
-            <a
-              href="#home"
+            <Link
+              to={getPath("/")}
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
+              className={`font-medium text-xl uppercase transition-colors py-2 ${
+                isActive("/")
+                  ? "text-[#FFF100]"
+                  : "text-white hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.home")}
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to={getPath("/about")}
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
+              className={`font-medium text-xl uppercase transition-colors py-2 ${
+                isActive("/about")
+                  ? "text-[#FFF100]"
+                  : "text-white hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.about")}
-            </a>
-            <a
-              href="#work"
+            </Link>
+            <Link
+              to={getPath("/work")}
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
+              className={`font-medium text-xl uppercase transition-colors py-2 ${
+                isActive("/work")
+                  ? "text-[#FFF100]"
+                  : "text-white hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.work")}
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to={getPath("/contact")}
               onClick={handleNavClick}
-              className="text-white font-montserrat font-medium text-xl uppercase hover:text-[#FFF100] transition-colors py-2"
+              className={`font-medium text-xl uppercase transition-colors py-2 ${
+                isActive("/contact")
+                  ? "text-[#FFF100]"
+                  : "text-white hover:text-[#FFF100]"
+              }`}
             >
               {t("nav.contact")}
-            </a>
+            </Link>
           </nav>
 
           {/* Language Switcher in Drawer */}

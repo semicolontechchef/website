@@ -1,37 +1,30 @@
 import { useTranslation } from "react-i18next";
+import { useLocalizedNavigation } from "../../hooks/useLocalizedNavigation";
 
 function LanguageSwitcher() {
-  const { i18n } = useTranslation();
-  const { t } = useTranslation();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const { i18n, t } = useTranslation();
+  const { switchLanguage } = useLocalizedNavigation();
+
+  const handleLanguageChange = (newLang) => {
+    switchLanguage(newLang);
   };
 
   return (
-    <div className="flex gap-2 px-3 py-1 font-montserrat text-xl uppercase">
+    <div className="flex gap-2 px-3 py-1 text-xl uppercase">
       {i18n.language === "ar" && (
         <button
-          onClick={() => changeLanguage("en")}
-          className={`transition-colors ${
-            i18n.language === "en"
-              ? "text-[#FFF100] font-bold"
-              : "text-white hover:text-[#FFF100]"
-          }`}
+          onClick={() => handleLanguageChange("en")}
+          className="font-montserrat transition-colors text-white hover:text-[#FFF100]"
         >
-          {t("nav.language")}
+          {t("nav.switch-lang")}
         </button>
       )}
-      {/* <span className="text-white">|</span> */}
       {i18n.language === "en" && (
         <button
-          onClick={() => changeLanguage("ar")}
-          className={`transition-colors ${
-            i18n.language === "ar"
-              ? "text-[#FFF100] font-bold"
-              : "text-white hover:text-[#FFF100]"
-          }`}
+          onClick={() => handleLanguageChange("ar")}
+          className="font-bukra transition-colors text-white hover:text-[#FFF100]"
         >
-          {t("nav.language")}
+          {t("nav.switch-lang")}
         </button>
       )}
     </div>

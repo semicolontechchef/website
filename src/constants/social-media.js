@@ -1,4 +1,4 @@
-export const socialMedia = [
+export const socialMediaLinks = [
   {
     name: "Facebook",
     icon: "facebook",

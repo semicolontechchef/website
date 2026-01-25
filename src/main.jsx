@@ -4,6 +4,16 @@ import App from "./App.jsx";
 import "./index.css";
 import i18n from "./i18n";
 import { I18nextProvider } from "react-i18next";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  easing: "ease-in-out",
+  once: true,
+  offset: 100,
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
