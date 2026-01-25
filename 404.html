@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/website/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta
@@ -27,13 +27,10 @@
       property="og:description"
       content="Semicolon Agency is a leading advertising agency providing innovative marketing, media production, and strategic planning services."
     />
-    <meta
-      property="og:url"
-      content="https://semicolontechchef.github.io/website/"
-    />
+    <meta property="og:url" content="https://semicolon-adv.com" />
     <meta
       property="og:image"
-      content="https://semicolontechchef.github.io/website/img/card.png"
+      content="https://semicolon-adv.com/img/card.png"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -52,7 +49,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://semicolontechchef.github.io/website/img/card.png"
+      content="https://semicolon-adv.com/img/card.png"
     />
 
     <!-- Language Alternates (will be dynamically updated) -->
@@ -71,10 +68,9 @@
         // Detect language from URL path
         var pathname = window.location.pathname;
         var lang = "en"; // default
-        var basePath = "/website/";
 
-        // Extract language from path: /website/ar/... or /website/en/...
-        // Also handle query string redirects: /website/?/ar/...
+        // Extract language from path: /ar/... or /en/...
+        // Also handle query string redirects: /?/ar/...
         var pathMatch = pathname.match(/\/(ar|en)(\/|$|\?)/);
         if (pathMatch) {
           lang = pathMatch[1];
@@ -111,13 +107,13 @@
         };
 
         var t = translations[lang] || translations.en;
-        var siteUrl = "https://semicolontechchef.github.io";
+        var siteUrl = "https://semicolon-adv.com";
 
         // Build current URL - preserve full path if available
         var currentUrl = siteUrl + pathname;
         // If pathname doesn't include language, add it
         if (!pathname.match(/\/(ar|en)(\/|$)/)) {
-          currentUrl = siteUrl + basePath + lang;
+          currentUrl = siteUrl + "/" + lang;
         }
 
         // Update html lang and dir attributes
@@ -157,8 +153,8 @@
         document.title = t.title;
 
         // Update hreflang links
-        var enUrl = siteUrl + basePath + "en";
-        var arUrl = siteUrl + basePath + "ar";
+        var enUrl = siteUrl + "/en";
+        var arUrl = siteUrl + "/ar";
 
         var hreflangEn = document.querySelector(
           'link[rel="alternate"][hreflang="en"]'
@@ -180,46 +176,33 @@
         if (canonical) canonical.setAttribute("href", currentUrl);
       })();
     </script>
-    <script type="module" crossorigin src="/website/assets/index-Z2MGaF9K.js"></script>
-    <link rel="stylesheet" crossorigin href="/website/assets/index-C2Dyhlon.css">
+    <script type="module" crossorigin src="/assets/index-GKtKNMLm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-JqRsq-uP.css">
   </head>
   <body>
     <script>
       // Single Page Apps for GitHub Pages - IMMEDIATE REDIRECT
-      // Handles base path: /website/
+      // Handles custom domain (no base path)
       // This script runs immediately, before any other scripts
       (function() {
         var l = window.location;
         var pathname = l.pathname;
         
-        // Normalize pathname
-        // Remove trailing slash except for root paths
-        if (pathname.endsWith("/") && pathname !== "/" && pathname !== "/website/") {
+        // Normalize pathname - remove trailing slash except for root
+        if (pathname.endsWith("/") && pathname !== "/") {
           pathname = pathname.slice(0, -1);
         }
         
-        // Split path into parts and filter empty strings
-        var pathParts = pathname.split("/").filter(function(p) { return p.length > 0; });
-        
-        // Base path is always /website/
-        var basePath = "/website/";
-        
-        // Extract the path after /website/
+        // Get the path (everything after the domain)
         // Examples:
-        // /website/ar -> pathParts = ["website", "ar"] -> restOfPath = "ar"
-        // /website/en -> pathParts = ["website", "en"] -> restOfPath = "en"
-        // /website/en/about -> pathParts = ["website", "en", "about"] -> restOfPath = "en/about"
-        var restOfPath = "";
-        if (pathParts.length > 0 && pathParts[0] === "website") {
-          restOfPath = pathParts.slice(1).join("/");
-        } else if (pathParts.length > 0) {
-          // If path doesn't start with "website", treat all as restOfPath
-          restOfPath = pathParts.join("/");
-        }
+        // /ar -> restOfPath = "ar"
+        // /en -> restOfPath = "en"
+        // /en/about -> restOfPath = "en/about"
+        var restOfPath = pathname.slice(1); // Remove leading slash
         
         // Build redirect path using ?/ format for SPA routing
         // The ?/ tells the SPA router to handle the path
-        var redirectPath = basePath + "?/" + restOfPath.replace(/&/g, "~and~");
+        var redirectPath = "/?/" + restOfPath.replace(/&/g, "~and~");
         
         // Preserve existing query string (if any, and not the ?/ we just added)
         if (l.search && l.search.length > 0 && !l.search.startsWith("?/")) {
@@ -238,7 +221,7 @@
       })();
     </script>
     <noscript>
-      <meta http-equiv="refresh" content="0; url=/website/" />
+      <meta http-equiv="refresh" content="0; url=/" />
     </noscript>
 
     <div id="root"></div>
