@@ -12,7 +12,7 @@ function OurPartnersSection() {
 
   return (
     <section className="relative px-4 w-full z-30">
-      <div className="container mx-auto pt-28 pb-[40rem] sm:pb-[15rem] md:pb-42 max-w-6xl relative z-10">
+      <div className="container mx-auto pt-28 pb-[32rem] sm:pb-[15rem] md:pb-42 lg:pb-12 max-w-6xl relative z-10">
         <div className="container mx-auto max-w-6xl">
           <h2
             className={`font-bold text-black text-center mb-8 md:mb-20 ${
@@ -42,7 +42,7 @@ function OurPartnersSection() {
                 key={index}
                 src={partnerImage}
                 alt={`partner-${index + 1}`}
-                className="w-full h-auto object-contain max-w-[200px] max-h-[100px]"
+                className="w-full h-auto object-contain max-w-[100px] max-h-[50px] lg:w-[200px] lg:h-[100px]"
                 data-aos="fade-up"
                 data-aos-delay={index * 50}
               />

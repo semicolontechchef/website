@@ -23,7 +23,7 @@ function HeroSection({ banners = ["banner-1"] }) {
   };
 
   return (
-    <section className="relative h-[calc(100vh-100px)] flex items-center justify-center pt-20 overflow-hidden">
+    <section className="relative h-[900px] flex items-center justify-center pt-20 overflow-hidden">
       {/* Slider container */}
       <div className="absolute inset-0">
         {banners.map((bannerName, index) => (
