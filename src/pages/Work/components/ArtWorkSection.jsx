@@ -33,10 +33,7 @@ function ArtWorkSection() {
           </h2>
 
           {/* Services Grid */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8"
-            dir="ltr"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
             {/* Creative Designs */}
             <a
               href={getAssetPath("portfolio/creative-designs.pdf")}
@@ -54,7 +51,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-1">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.creative-designs`)}
                 </p>
               </div>
@@ -76,7 +73,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-2">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.billboard`)}
                 </p>
               </div>
@@ -98,7 +95,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-3">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.social-media`)}
                 </p>
               </div>
@@ -118,7 +115,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-3">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.media-production`)}
                 </p>
               </div>
@@ -140,7 +137,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-2">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.printings`)}
                 </p>
               </div>
@@ -160,7 +157,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-3">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.tv-ads`)}
                 </p>
               </div>
@@ -184,7 +181,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-3">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.public-transportation`)}
                 </p>
               </div>
@@ -204,7 +201,7 @@ function ArtWorkSection() {
                     className="w-full h-auto"
                   />
                 </div>
-                <p className="text-white bg-black bg-opacity-50 px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-2">
+                <p className="px-4 py-2 rounded-full inline-block text-xl md:text-4xl text-center w-full max-w-md mx-auto">
                   {t(`services.strategy-plans`)}
                 </p>
               </div>

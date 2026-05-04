@@ -21,7 +21,7 @@ function WhoSection() {
             data-aos="fade-up"
           >
             <h2
-              className={`text-black bg-white px-24 py-0 rounded-full text-center text-4xl lg:text-6xl mb-8 md:mb-6 ${
+              className={`text-black px-24 py-0 rounded-full text-center text-4xl lg:text-6xl mb-8 md:mb-6 ${
                 i18n.language === "ar"
                   ? "font-bukra font-bold"
                   : "font-achemost font-semibold"
@@ -30,10 +30,10 @@ function WhoSection() {
               {t("about.who.who-are-we.title")}
             </h2>
             <p
-              className={`text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl ${
+              className={`text-center text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl ${
                 i18n.language === "ar"
-                  ? "font-bukra font-semibold"
-                  : "font-montserrat"
+                  ? "font-bukra"
+                  : "font-montserrat font-light"
               }`}
             >
               {t("about.who.who-are-we.text")}
@@ -44,7 +44,7 @@ function WhoSection() {
             data-aos="fade-up"
           >
             <h2
-              className={`text-black bg-white px-24 py-0 rounded-full text-center text-4xl lg:text-6xl mb-8 md:mb-6 ${
+              className={`text-blackpx-24 py-0 rounded-full text-center text-4xl lg:text-6xl mb-8 md:mb-6 ${
                 i18n.language === "ar"
                   ? "font-bukra font-bold"
                   : "font-achemost font-semibold"
@@ -53,10 +53,10 @@ function WhoSection() {
               {t("about.who.our-vision.title")}
             </h2>
             <p
-              className={`text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl ${
+              className={`text-center text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl ${
                 i18n.language === "ar"
-                  ? "font-bukra font-semibold"
-                  : "font-montserrat"
+                  ? "font-bukra"
+                  : "font-montserrat font-light"
               }`}
             >
               {t("about.who.our-vision.text")}
@@ -67,7 +67,7 @@ function WhoSection() {
             data-aos="fade-up"
           >
             <h2
-              className={`text-black bg-white px-24 py-0 rounded-full text-center text-4xl lg:text-6xl mb-8 md:mb-6 ${
+              className={`text-blackpx-24 py-0 rounded-full text-center text-4xl lg:text-6xl mb-8 md:mb-6 ${
                 i18n.language === "ar"
                   ? "font-bukra font-bold"
                   : "font-achemost font-semibold"
@@ -76,10 +76,10 @@ function WhoSection() {
               {t("about.who.our-mission.title")}
             </h2>
             <p
-              className={`text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl ${
+              className={`text-center text-black text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl ${
                 i18n.language === "ar"
-                  ? "font-bukra font-semibold"
-                  : "font-montserrat"
+                  ? "font-bukra"
+                  : "font-montserrat font-light"
               }`}
             >
               {t("about.who.our-mission.text")}

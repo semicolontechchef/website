@@ -27,34 +27,25 @@ function WhoIsSection() {
 
         {/* Description */}
         <div
-          className={`container mx-auto max-w-6xl border-b-2 border-black pb-8 md:pb-12 px-4 ${
+          className={`container mx-auto max-w-6xl border-b-2 border-black pb-8 md:pb-12 px-4 space-y-4 ${
             i18n.language === "ar" ? "font-bukra" : "font-montserrat"
           }`}
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <p className="text-black text-sm sm:text-base md:text-xl font-medium">
-            <span className="font-bold text-black text-lg sm:text-xl md:text-4xl">
-              •
-            </span>
+          <p className="text-black text-sm sm:text-base md:text-xl font-medium text-center">
             <span className="font-bold text-black text-lg sm:text-xl md:text-2xl">
               {t("home.who.p1.bold")}{" "}
             </span>
             {t("home.who.p1.text")}
           </p>
-          <p className="text-black text-sm sm:text-base md:text-xl font-medium">
-            <span className="font-bold text-black text-lg sm:text-xl md:text-4xl">
-              •
-            </span>
+          <p className="text-black text-sm sm:text-base md:text-xl font-medium text-center">
             <span className="font-bold text-black text-lg sm:text-xl md:text-2xl">
               {t("home.who.p2.bold")}{" "}
             </span>
             {t("home.who.p2.text")}
           </p>
-          <p className="text-black text-sm sm:text-base md:text-xl font-medium">
-            <span className="font-bold text-black text-lg sm:text-xl md:text-4xl">
-              •
-            </span>
+          <p className="text-black text-sm sm:text-base md:text-xl font-medium text-center">
             <span className="font-bold text-black text-lg sm:text-xl md:text-2xl">
               {t("home.who.p3.bold")}{" "}
             </span>

@@ -95,7 +95,7 @@ function Navbar() {
 
           {/* Right Side - Language Switcher and Hamburger */}
           <div className="flex items-center gap-4">
-            <div className="hidden lg:block">
+            <div className="hidden h-auto w-[150px] md:w-[200px] mx-auto md:mx-0 lg:flex items-center justify-end gap-4">
               <LanguageSwitcher />
             </div>
 

@@ -1,11 +1,77 @@
 import { useTranslation } from "react-i18next";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { getAssetPath } from "../../../utils/paths";
+
+function useCountUp(end, durationMs, enabled) {
+  const [value, setValue] = useState(0);
+  const frameRef = useRef(null);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const reduced =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduced) {
+      setValue(end);
+      return;
+    }
+
+    const start = performance.now();
+
+    const tick = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / durationMs, 1);
+      const eased = 1 - (1 - progress) ** 3;
+      setValue(Math.round(eased * end));
+      if (progress < 1) {
+        frameRef.current = requestAnimationFrame(tick);
+      } else {
+        setValue(end);
+      }
+    };
+
+    frameRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (frameRef.current) cancelAnimationFrame(frameRef.current);
+    };
+  }, [end, durationMs, enabled]);
+
+  return value;
+}
 
 function StatisticsSection() {
   const { t, i18n } = useTranslation();
+  const sectionRef = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+  const hasTriggered = useRef(false);
+
+  const onIntersect = useCallback((entries) => {
+    const [entry] = entries;
+    if (!entry?.isIntersecting || hasTriggered.current) return;
+    hasTriggered.current = true;
+    setShouldAnimate(true);
+  }, []);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(onIntersect, {
+      threshold: 0.25,
+      rootMargin: "0px 0px -10% 0px",
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [onIntersect]);
+
+  const years = useCountUp(5, 1400, shouldAnimate);
+  const professionals = useCountUp(40, 1600, shouldAnimate);
+  const projects = useCountUp(800, 2200, shouldAnimate);
 
   return (
-    <section className="relative w-full z-20 overflow-hidden">
+    <section ref={sectionRef} className="relative w-full z-20 overflow-hidden">
       <img
         src={getAssetPath("img/layout/black-bg-top.svg")}
         alt="black-bg"
@@ -20,8 +86,8 @@ function StatisticsSection() {
               data-aos-delay="0"
             >
               <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                <span className="font-montserrat font-bold text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">
-                  05
+                <span className="font-montserrat font-bold text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl tabular-nums">
+                  {String(years).padStart(2, "0")}
                 </span>
                 <span className="text-[#FFF100] font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
                   +
@@ -41,8 +107,8 @@ function StatisticsSection() {
               data-aos-delay="200"
             >
               <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                <span className="font-montserrat font-bold text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">
-                  40
+                <span className="font-montserrat font-bold text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl tabular-nums">
+                  {professionals}
                 </span>
                 <span className="text-[#FFF100] font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
                   +
@@ -62,8 +128,8 @@ function StatisticsSection() {
               data-aos-delay="400"
             >
               <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                <span className="font-montserrat font-bold text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">
-                  800
+                <span className="font-montserrat font-bold text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl tabular-nums">
+                  {projects}
                 </span>
                 <span className="text-[#FFF100] font-montserrat font-bold text-3xl sm:text-4xl md:text-6xl lg:text-9xl">
                   +

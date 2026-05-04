@@ -18,7 +18,7 @@ function TeamSection() {
   const totalWidthDesktop = (duplicatedImages.length / 3) * 100; // 800%
 
   return (
-    <section>
+    <section className="team-section">
       <p
         className={`font-bold text-white bg-black px-4 py-2 rounded-full text-xl md:text-6xl text-center w-full mx-auto -rotate-2 my-10 ${
           i18n.language === "ar"
@@ -65,6 +65,9 @@ function TeamSection() {
                 100% {
                   transform: translateX(-50%);
                 }
+              }
+              .team-section:hover .slide-continuous {
+                animation-play-state: paused;
               }
             `}</style>
             </div>

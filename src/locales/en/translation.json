@@ -1,4 +1,5 @@
 {
+  "semicolon": "Semicolon",
   "seo": {
     "title": "Semicolon Agency - Creative Advertising & Media Production",
     "description": "Semicolon Agency is a leading advertising agency providing innovative marketing, media production, and strategic planning services.",
@@ -16,15 +17,15 @@
     "who": {
       "p1": {
         "bold": "",
-        "text": "We don't believe in full stop. What we believe in is a long journey with our clients, where trust is the force that placed us at the forefront of the market. That trust strengthened our belief that marketing and media, when implemented right, can create real impact for people and for business owners alike."
+        "text": "Operating from Palestine and Egypt, our passionate team uses modern strategies to capture the true core of your brand. We don't do half-steps."
       },
       "p2": {
         "bold": "",
-        "text": "“Semicolon is our Passion” an amazing team operating from Palestine and Egypt to deliver services structured to accommodate the fast pace the world is moving into. We tend to touch the core of your brand identity by using up-to-date modern tools and strategies, to transform experience into solutions tailored for anyone seeking a fresh start."
+        "text": "At Semicolon, we don't believe in full stops; we believe in endless journeys fueled by trust, with deliver a complete vision—blending powerful ideas with dynamic multi-channel execution to create real impact. "
       },
       "p3": {
         "bold": "",
-        "text": "Between the dot and the pause, you won't find half-steps. You'll find a complete vision—one that starts with an idea and ends with your brand present across multiple advertising channels. Because one channel with a strong idea is not enough, and multiple channels without a strong idea won't achieve your goals. At Semicolon, we blend both to bring your project's ambition to life."
+        "text": "Semicolon: No full stops, just your fresh start."
       }
     },
     "experts": {
@@ -175,6 +176,6 @@
     "about": "About us",
     "work": "Work",
     "contact": "Contact",
-    "copyright": "COPYRIGHT 2025 BY"
+    "copyright": "COPYRIGHT 1940 BY"
   }
 }
