@@ -56,13 +56,24 @@
         "text": "A strategic partnership built on global standards. Our mission is to go beyond being a traditional advertising intermediary. We strive to become your first strategic marketing partner, powered by years of experience and a unique blend of tools from both past and future…securing your place at the front of the market."
       }
     },
+    "message": "message",
     "message-1": {
-      "title": "CEO MESSAGE",
-      "description": "Semicolon, is more than just a symbol; it's a bridge connecting ideas, media, and advertising in an innovative and effective way. Our mission stems from the expertise of our strong and experienced team, who understand exactly how to achieve the desired goals for every client, regardless of their volume or market position. We aspire to global leadership by providing integrated advertising and media solutions that keep pace with the latest advancements, especially in the field of artificial intelligence. Our vision is to be the partner that puts our clients ahead through innovative solutions that precisely meet their needs and help them achieve their goals effectively and impactful."
+      "title": "CEO",
+      "name": "Mr. Ramez",
+      "paragraphs": [
+        "Semicolon is not just a symbol; it is the bridge that carries your ideas into a world of impact.",
+        "We are here to turn your ambitions into tangible results through the expertise of a team that knows no limits. No matter the size of your project, our global vision drives us to use the latest AI technologies to keep you always ahead.",
+        "With Semicolon, we are partners in creating success that leaves a lasting mark."
+      ]
     },
     "message-2": {
       "title": "Co-founder | Artistic Director",
-      "description": "Leadership isn't built on repetition, but on a deep understanding of the times and the market, and on the ability to see what isn't said before it's asked. This is where most ideas originate, and this is where Semicolon has come to existence. Semicolon wasn't created to be just another carbon copy of other similar agencies in the region, but rather a different kind of thinking space, giving brands a genuine voice and a unique presence. I believe that the best ideas are those that are intelligently conceived, flawlessly executed, and measured by their impact Tamara “The idea comes first…then everything else.”"
+      "name": "Ms. Tamara",
+      "paragraphs": [
+        "Leadership is not about resembling others, but about your ability to anticipate the future.",
+        "This is where the spark of \"Semicolon\" began. We are not just another repeated agency model; we are an exceptional thinking space designed to give your brand a true and distinctive voice.",
+        "We create ideas intelligently and execute them with full professionalism, measuring success by real impact because, in the end: \"The idea comes first... then everything follows.\""
+      ]
     },
     "team": {
       "title": "Our Creative Team"

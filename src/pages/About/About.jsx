@@ -9,7 +9,7 @@ function About() {
       <div className="flex-1">
         <HeroSection banners={["our-creative-team"]} />
       </div>
-      <div className="flex-1 -mt-[120px] md:-mt-[80px]">
+      <div className="flex-1 -mt-[120px] md:-mt-[80px] z-10">
         <WhoSection />
       </div>
       <div className="flex-1 -mt-[120px] md:-mt-[120px] z-10 relative">

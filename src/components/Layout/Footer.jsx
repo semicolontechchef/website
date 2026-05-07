@@ -9,6 +9,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { FiMapPin, FiMail, FiSmartphone } from "react-icons/fi";
 import { useLocalizedNavigation } from "../../hooks/useLocalizedNavigation";
 import { getAssetPath } from "../../utils/paths";
 
@@ -35,7 +36,7 @@ function Footer() {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 pt-8 md:pt-32 w-full">
           {/* <div className="flex flex-col sm:flex-row items-center lg:items-start gap-6 lg:gap-8"> */}
           {/* Right - Navigation */}
-          <div className="flex flex-col items-center gap-2 md:items-start font-bold border-t-0 border-s-4 border-black pt-4 md:pt-0 ps-4 text-black mb-2 text-lg  md:text-3xl">
+          <div className="flex flex-col items-center gap-2 md:items-start font-bold pt-4 md:pt-0 ps-4 text-black mb-2 text-lg  md:text-3xl">
             <Link
               to={getPath("/")}
               className="hover:text-[#1a2b4a] transition-colors"
@@ -99,28 +100,28 @@ function Footer() {
 
           {/* <div className="flex flex-col sm:flex-row items-center lg:items-start w-full gap-6 lg:gap-8"> */}
           {/* Center Right - Contact Information */}
-          <div className="flex flex-col items-center md:items-start border-t-0 border-s-2 border-black pt-4 md:pt-0 ps-4 text-black mb-2 text-lg  md:text-3xl">
+          <div className="flex flex-col items-center md:items-start  pt-4 md:pt-0 ps-4 text-black mb-2 text-lg  md:text-3xl">
             <h3 className="uppercase font-semibold">
               {t("footer.contact-us")}
             </h3>
             <a
               href="https://maps.app.goo.gl/z3D1W1kJLwX3Y9w66"
-              className=" hover:text-[#1a2b4a] transition-colors"
+              className="flex items-center gap-2 hover:text-[#1a2b4a] transition-colors"
             >
-              {t("footer.ramallah")}
+              <FiMapPin className="w-6 h-6" /> {t("footer.ramallah")}
             </a>
             <a
               href="mailto:info@semicolon.media"
-              className=" hover:text-[#1a2b4a] transition-colors break-all"
+              className="flex items-center gap-2 hover:text-[#1a2b4a] transition-colors break-all"
             >
-              {t("footer.email")}
+              <FiMail className="w-6 h-6" /> {t("footer.email")}
             </a>
             <a
               href="tel:+970599505059"
-              className=" hover:text-[#1a2b4a] transition-colors"
+              className="flex items-center gap-2 hover:text-[#1a2b4a] transition-colors"
               dir="ltr"
             >
-              {t("footer.phone")}
+              <FiSmartphone className="w-6 h-6" /> {t("footer.phone")}
             </a>
           </div>
 

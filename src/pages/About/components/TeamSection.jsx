@@ -1,21 +1,17 @@
 import { getAssetPath } from "../../../utils/paths";
 import { useTranslation } from "react-i18next";
+import { team } from "../../../constants/team";
 
 function TeamSection() {
   const { t, i18n } = useTranslation();
 
-  const totalImages = 15;
-
-  // Generate array of team image paths
-  const teamImages = Array.from({ length: totalImages }, (_, i) =>
-    getAssetPath(`img/about/team/${i + 1}.png`)
-  );
+  const totalCards = team.length;
 
   // Duplicate images for seamless infinite loop
-  const duplicatedImages = [...teamImages, ...teamImages];
+  const duplicatedCards = [...team, ...team];
 
-  const totalWidthMobile = duplicatedImages.length * 100; // 2400%
-  const totalWidthDesktop = (duplicatedImages.length / 3) * 100; // 800%
+  const totalWidthMobile = duplicatedCards.length * 100; // 2400%
+  const totalWidthDesktop = (duplicatedCards.length / 3) * 100; // 800%
 
   return (
     <section className="team-section">
@@ -35,15 +31,38 @@ function TeamSection() {
             <div className="relative overflow-hidden w-full">
               {/* Slider container */}
               <div className="flex slide-continuous">
-                {duplicatedImages.map((imageSrc, index) => (
-                  <div key={index} className="flex-shrink-0 slide-item">
+                {duplicatedCards.map((card, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 slide-item relative"
+                  >
                     <div className="relative overflow-hidden rounded-lg px-3">
                       <img
-                        src={imageSrc}
-                        alt={`Team member ${(index % totalImages) + 1}`}
+                        src={getAssetPath(card.image)}
+                        alt={`Team member ${(index % totalCards) + 1}`}
                         className="h-auto object-contain max-h-[550px]"
                         loading="lazy"
                       />
+                    </div>
+                    <div className="absolute w-full h-full top-0 left-0 flex flex-col items-center justify-end px-4 pb-16">
+                      <p
+                        className={`text-white text-center mb-4 ${
+                          i18n.language === "ar"
+                            ? "font-arsian text-8xl"
+                            : "font-montserrat font-semibold text-5xl"
+                        }`}
+                      >
+                        {card.name[i18n.language]}
+                      </p>
+                      <p
+                        className={`text-white text-center ${
+                          i18n.language === "ar"
+                            ? "font-arsian text-6xl"
+                            : "font-montserrat font-medium text-3xl"
+                        }`}
+                      >
+                        {card.title[i18n.language]}
+                      </p>
                     </div>
                   </div>
                 ))}
