@@ -234,7 +234,7 @@ function WhoIsSection() {
                       "img/home/services/public-transportation.svg"
                     )}
                     alt="public-transportation"
-                    className="w-[160px] h-[160px]"
+                    className="w-[250px] h-[160px]"
                   />
                 </div>
                 <p

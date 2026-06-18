@@ -58,6 +58,42 @@ function AiProduction() {
       url: "https://www.youtube.com/embed/U3kjo7NcCkc",
       title: "Video 10",
     },
+    //
+    {
+      id: 11,
+      url: "https://www.youtube.com/embed/o25-V6WXaPk",
+      title: "Video 11",
+    },
+    {
+      id: 12,
+      url: "https://www.youtube.com/embed/osTMYrMn59g",
+      title: "Video 12",
+    },
+    {
+      id: 13,
+      url: "https://www.youtube.com/embed/kgfNAluApp0",
+      title: "Video 13",
+    },
+    {
+      id: 14,
+      url: "https://www.youtube.com/embed/0NDOaeu7htg",
+      title: "Video 14",
+    },
+    {
+      id: 15,
+      url: "https://www.youtube.com/embed/5KoZxJQg4I4",
+      title: "Video 15",
+    },
+    {
+      id: 16,
+      url: "https://www.youtube.com/embed/vZp-iERriTw",
+      title: "Video 16",
+    },
+    {
+      id: 17,
+      url: "https://www.youtube.com/embed/Qyk_n61UrKE",
+      title: "Video 17",
+    },
   ];
 
   return (
@@ -65,14 +101,14 @@ function AiProduction() {
       <div className="flex-1 z-10">
         <HeroSection banners={banners} />
       </div>
-      <div className="flex-1 -mt-[120px] md:-mt-[80px]">
+      <div className="flex-1 -mt-[200px] md:-mt-[150px]">
         <VideosGrid
           videos={videos}
           title={t("work.media-production.ai-production.header.title")}
           subtitle={t("work.media-production.ai-production.header.desc")}
         />
       </div>
-      <div className="flex-1 -mt-[120px] relative">
+      <div className="flex-1 -mt-[150px] relative">
         <DescSection
           desc={t("work.media-production.ai-production.desc.desc")}
           descYellow={t("work.media-production.ai-production.desc.desc-yellow")}

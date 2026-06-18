@@ -119,9 +119,9 @@ function Footer() {
             <a
               href="tel:+970599505059"
               className="flex items-center gap-2 hover:text-[#1a2b4a] transition-colors"
-              dir="ltr"
             >
-              <FiSmartphone className="w-6 h-6" /> {t("footer.phone")}
+              <FiSmartphone className="w-6 h-6" />
+              <span dir="ltr">{t("footer.phone")}</span>
             </a>
           </div>
 

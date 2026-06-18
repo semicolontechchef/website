@@ -13,7 +13,7 @@ function VideosGrid({ videos, title, subtitle }) {
       }}
     >
       {/* Videos Grid Section */}
-      <section className="pt-8 md:pt-16 px-4 z-10 pb-16 md:pb-36">
+      <section className="pt-32 px-4 z-10 pb-16 md:pb-36">
         <div
           className={`container mx-auto max-w-6xl my-24 relative text-center ${
             i18n.language === "ar"

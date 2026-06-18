@@ -28,6 +28,17 @@ function VideoProduction() {
       url: "https://www.youtube.com/embed/CyXHt76PTMk",
       title: "Video 4",
     },
+    // Duplicate
+    // {
+    //   id: 5,
+    //   url: "https://www.youtube.com/embed/3AENKdptdvQ",
+    //   title: "Video 5",
+    // },
+    {
+      id: 6,
+      url: "https://www.youtube.com/embed/DR3c30d_mKk",
+      title: "Video 6",
+    },
   ];
 
   return (
