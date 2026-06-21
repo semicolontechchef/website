@@ -94,6 +94,11 @@ function AiProduction() {
       url: "https://www.youtube.com/embed/Qyk_n61UrKE",
       title: "Video 17",
     },
+    {
+      id: 18,
+      url: "https://www.youtube.com/embed/ZGfvT9_oQr8",
+      title: "Video 18",
+    },
   ];
 
   return (
